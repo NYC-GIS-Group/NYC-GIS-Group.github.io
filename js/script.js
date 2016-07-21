@@ -82,6 +82,8 @@ cartodb.createLayer(map, layerUrl)
     ntaLayer = layer.getSubLayer(1); 
     ntaLayer.hide();  //hide neighborhood polygons
     ntaLayer.on('featureClick', processNeighborhood);
+  }, {
+	  https: true
   });
 
 //populate fields list
