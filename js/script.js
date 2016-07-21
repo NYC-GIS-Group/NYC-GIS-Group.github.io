@@ -73,7 +73,9 @@ map.on('draw:drawstart', function (e) {
 //add cartodb named map
 var layerUrl = 'https://nycem.carto.com/u/imorey/api/v2/viz/217510a8-447a-11e6-81f4-0e05a8b3e3d7/viz.json';
 
-cartodb.createLayer(map, layerUrl)
+cartodb.createLayer(map, layerUrl, {
+	  https: true
+  })
   .addTo(map)
   .on('done', function(layer) {
     mainLayer = layer.getSubLayer(0);
@@ -82,8 +84,6 @@ cartodb.createLayer(map, layerUrl)
     ntaLayer = layer.getSubLayer(1); 
     ntaLayer.hide();  //hide neighborhood polygons
     ntaLayer.on('featureClick', processNeighborhood);
-  }, {
-	  https: true;
   });
 
 //populate fields list
