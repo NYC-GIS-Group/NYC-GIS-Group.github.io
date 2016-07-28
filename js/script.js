@@ -84,12 +84,7 @@ cartodb.createLayer(map, layerUrl, {
     ntaLayer = layer.getSubLayer(1); 
     ntaLayer.hide();  //hide neighborhood polygons
     ntaLayer.on('featureClick', processNeighborhood);
-<<<<<<< HEAD
-  }, {
-	  https: true
-=======
->>>>>>> origin/master
-  });
+	});
 
 //populate fields list
 $.getJSON('data/fields.json',function(data){
