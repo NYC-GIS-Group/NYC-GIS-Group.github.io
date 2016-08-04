@@ -1,10 +1,11 @@
-# plutoplus
-[//]: <> A custom download tool for NYC PLUTO tax lot data, built with CartoDB.  View it live at [http://chriswhong.github.io/plutoplus](http://chriswhong.github.io/plutoplus)
+# Census Data Download
 
-![cursor_and_pluto_data_downloader_powered_by_cartodb_and_plutoplus_ _bash_ _102x35](https://cloud.githubusercontent.com/assets/1833820/8522377/7719b904-23bb-11e5-936c-0fe760ed3621.png)
+A custom download tool for United States Census data, built with CartoDB.  View it live at [https://nyc-gis-group.github.io/](https://nyc-gis-group.github.io/)
+*Special thanks to Chris Whong and his work [here](http://chriswhong.github.io/plutoplus/)*
 
-About
-=====
+<!-- ![cursor_and_pluto_data_downloader_powered_by_cartodb_and_plutoplus_ _bash_ _102x35](https://cloud.githubusercontent.com/assets/1833820/8522377/7719b904-23bb-11e5-936c-0fe760ed3621.png) -->
+
+# About
 
 PLUTO is an amazing NYC Open Data Resource that contains a wealth of information about the city's tax lots, including zoning, # of units, tax assessments, and more. It contains information for the city's 870,000+ properties, and includes over 80 attributes for each lot! That's a lot of open data!
 
