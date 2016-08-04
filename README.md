@@ -1,5 +1,5 @@
 # plutoplus
-A custom download tool for NYC PLUTO tax lot data, built with CartoDB.  View it live at [http://chriswhong.github.io/plutoplus](http://chriswhong.github.io/plutoplus)
+[comment]: <> A custom download tool for NYC PLUTO tax lot data, built with CartoDB.  View it live at [http://chriswhong.github.io/plutoplus](http://chriswhong.github.io/plutoplus)
 
 ![cursor_and_pluto_data_downloader_powered_by_cartodb_and_plutoplus_ _bash_ _102x35](https://cloud.githubusercontent.com/assets/1833820/8522377/7719b904-23bb-11e5-936c-0fe760ed3621.png)
 
