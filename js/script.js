@@ -246,8 +246,8 @@ function processNeighborhood(e, latlng, pos, data, layer) {
   var nid = data.cartodb_id;
   selectLayer.clearLayers();
 
-  var sql = new cartodb.SQL({ user: 'cwhong' });
-  sql.execute("SELECT the_geom FROM nynta WHERE cartodb_id = {{id}}", 
+  var sql = new cartodb.SQL({ user: 'imorey' });
+  sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
     { 
       id: data.cartodb_id 
     },
