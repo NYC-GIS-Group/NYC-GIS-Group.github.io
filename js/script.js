@@ -6,7 +6,7 @@ var nPolygon;
 //initialize map
 var map = new L.Map('map', { 
   center: [40.70663644882689,-73.97815704345703],
-  zoom: 14
+  zoom: 12
 });
 
 var selectLayer = L.geoJson().addTo(map); //add empty geojson layer for selections
@@ -204,9 +204,9 @@ $('.download').click(function(){
     data.cartodb = true;
   }
 
-  var queryTemplate = 'https://cwhong.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=pluto&q=SELECT the_geom{{fields}} FROM pluto15v1 a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
-
-
+  //var queryTemplate = 'https://cwhong.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=pluto&q=SELECT the_geom{{fields}} FROM pluto15v1 a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
+  var queryTemplate = 'https://imorey.carto.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=acs_dl&q=SELECT the_geom{{fields}} FROM census_2010_tracts_merge a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
+  
   var buildquery = Handlebars.compile(queryTemplate);
 
   var url = buildquery(data);
