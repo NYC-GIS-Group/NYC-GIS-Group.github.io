@@ -1,14 +1,14 @@
 [
   {
-    "name":"TOTPOP",
+    "name":"totpop",
     "description":"Total population by census block"
   },
   {
-    "name":"Acres",
+    "name":"acres",
     "description":"Total acreage of the census block"
   },
   {
-    "name":"Sq_miles",
+    "name":"sq_miles",
     "description":"Total square miles of the census block"
   }
 ]

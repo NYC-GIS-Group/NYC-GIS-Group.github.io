@@ -205,7 +205,7 @@ $('.download').click(function(){
   }
 
   //var queryTemplate = 'https://cwhong.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=pluto&q=SELECT the_geom{{fields}} FROM pluto15v1 a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
-  var queryTemplate = 'https://nycem.carto.com/u/imorey/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=acs_dl&q=SELECT the_geom{{fields}} FROM census_2010_tracts_merge a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
+  var queryTemplate = 'https://imorey.carto.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=acs_dl&q=SELECT the_geom{{fields}} FROM census_2010_tracts_merge a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
   
   var buildquery = Handlebars.compile(queryTemplate);
 
