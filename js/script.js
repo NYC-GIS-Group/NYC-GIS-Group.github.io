@@ -259,7 +259,7 @@ function processNeighborhood(e, latlng, pos, data, layer) {
     console.log(data);
     selectLayer.addData(data);
     //setup SQL statement for intersection
-    nPolygon = '(SELECT the_geom FROM nynta WHERE cartodb_id = ' + nid + ')';
+    nPolygon = '(SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = ' + nid + ')';
   })
 }
 
