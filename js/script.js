@@ -248,9 +248,11 @@ function processNeighborhood(e, latlng, pos, data, layer) {
   selectLayer.clearLayers();
 
   var sql = new cartodb.SQL({ user: 'imorey' });
-  sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
+  //XXX sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
+  sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{nid}}", 
     { 
-      id: data.cartodb_id 
+      //XXX id: data.cartodb_id 
+	  nid: data.cartodb_id 
     },
     {
       format:'geoJSON'
