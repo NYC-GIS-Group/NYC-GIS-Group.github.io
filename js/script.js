@@ -248,11 +248,11 @@ function processNeighborhood(e, latlng, pos, data, layer) {
   selectLayer.clearLayers();
 
   var sql = new cartodb.SQL({ user: 'imorey' });
-  //XXX sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
-  sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{nid}}", 
+  //sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
+  sql.execute("SELECT * FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
     { 
-      //XXX id: data.cartodb_id 
-	  nid: data.cartodb_id 
+      id: data.cartodb_id 
+	  //XXX nid: data.cartodb_id 
     },
     {
       format:'geoJSON'
@@ -289,7 +289,7 @@ function makeSqlPolygon(coords) {
 }
 
 function initCheckboxes() {
-  //sweet checkbox list from http://bootsnipp.com/snippets/featured/checked-list-group
+  // checkbox list from http://bootsnipp.com/snippets/featured/checked-list-group
   $('.list-group.checked-list-box .list-group-item').each(function () {
       
       // Settings
