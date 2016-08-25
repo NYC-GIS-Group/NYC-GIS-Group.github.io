@@ -100,7 +100,7 @@ $.getJSON('data/fields.json',function(data){
       + '<span class="glyphicon glyphicon-info-sign icon-right" aria-hidden="true"></span></li>'
     
     $('.fieldList').append(listItem);
-    $('#' + field.name).data("description",field.description);
+    $('#' + field.alias).data("description",field.description);
     
   });
 
