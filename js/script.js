@@ -70,6 +70,10 @@ map.on('draw:drawstart', function (e) {
   }
 });
 
+//add basemap
+var basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>' });  
+map.addLayer(basemap);
+
 //add cartodb named map
 var layerUrl = 'https://nycem.carto.com/u/imorey/api/v2/viz/217510a8-447a-11e6-81f4-0e05a8b3e3d7/viz.json';
 
@@ -85,7 +89,7 @@ cartodb.createLayer(map, layerUrl, {
     ntaLayer.hide();  //hide neighborhood polygons
     ntaLayer.on('featureClick', processNeighborhood);
 	});
-
+	
 //populate fields list
 $.getJSON('data/fields.json',function(data){
 
@@ -248,8 +252,8 @@ function processNeighborhood(e, latlng, pos, data, layer) {
   selectLayer.clearLayers();
 
   var sql = new cartodb.SQL({ user: 'imorey' });
-  //sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
-  sql.execute("SELECT * FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
+  sql.execute("SELECT the_geom FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
+  // XXX sql.execute("SELECT * FROM cscl_neighborhood_20141110 WHERE cartodb_id = {{id}}", 
     { 
       id: data.cartodb_id 
 	  //XXX nid: data.cartodb_id 
