@@ -96,11 +96,11 @@ $.getJSON('data/fields.json',function(data){
   console.log(data.length);
   data.forEach(function(field) {
     var listItem = '<li id = "' + field.name + '" class="list-group-item">' 
-      + field.alias 
+      + field.name 
       + '<span class="glyphicon glyphicon-info-sign icon-right" aria-hidden="true"></span></li>'
     
     $('.fieldList').append(listItem);
-    $('#' + field.alias).data("description",field.description);
+    $('#' + field.name).data("description",field.description);
     
   });
 
