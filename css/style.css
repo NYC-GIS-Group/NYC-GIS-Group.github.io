@@ -17,8 +17,9 @@
 .button > a {
   padding: 13px 26px;
 }
-.HeaderFixed--blue {
-  background: #0090D7
+.HeaderFixed--black {
+  opacity: 0.7;
+  background: #000000;
 }
 a:hover {
   text-decoration: none;
@@ -157,10 +158,6 @@ a:hover {
 
 .sidebar-cell {
   overflow: scroll;
-}
-
-.HeaderFixed {
-  background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);
 }
 
 .HeaderFixed strong {
